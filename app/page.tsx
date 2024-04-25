@@ -1,3 +1,5 @@
+"use client"
+
 import Card from "@/components/home/card";
 import { DEPLOY_URL } from "@/lib/constants";
 import { Github, Twitter } from "@/components/shared/icons";
@@ -14,8 +16,13 @@ import CODE from "public/CODE.png"
 import SOCIAL from "public/SOCIAL.png"
 import EDUCATION from "public/EDUCATION.png"
 import INTERESTS from "public/INTERESTS.png"
+import Modal from "@/components/Modal"
+import { useDemoModal } from "@/components/home/PastExperiences";
+import { useState } from "react";
 
-export default async function Home() {
+export default function Home() {
+  const { setShowDemoModal, DemoModal } = useDemoModal();
+  
   return (
     <>
       <div className="z-10 w-full px-5 xl:px-0">
@@ -75,6 +82,7 @@ export default async function Home() {
       <div className="my-10 grid w-[70%] max-w-screen-xl animate-fade-up grid-cols-1 gap-7 px-5 md:grid-cols-3 xl:px-0">
         {/* Feature 1 */}
         <div
+          onClick={() => setShowDemoModal(true)}
           className="flex flex-col align-center justify-center relative col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md md:col-span-1"
         >
           <div className="h-[60%] flex flex-col justify-between align-center">
@@ -90,9 +98,8 @@ export default async function Home() {
               />
             </div>
           </div>
-
         </div>
-
+        <DemoModal />
         {/* Feature 2 */}
         <div
           className="relative col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
