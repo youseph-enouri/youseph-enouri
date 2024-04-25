@@ -5,24 +5,17 @@ import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
+import PROFILE from "public/kayne.jpg"
+import SMITH from "public/SMITH.png"
+import DEBACLE from "public/Debacle.png"
+import STRAFFIC from "public/STRAFFIC.png"
+import TECH from "public/TECH.png"
+import CODE from "public/CODE.png"
+import SOCIAL from "public/SOCIAL.png"
+import EDUCATION from "public/EDUCATION.png"
+import INTERESTS from "public/INTERESTS.png"
 
 export default async function Home() {
-  const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/steven-tey/precedent",
-    {
-      ...(process.env.GITHUB_OAUTH_TOKEN && {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }),
-      // data will revalidate every 24 hours
-      next: { revalidate: 86400 },
-    },
-  )
-    .then((res) => res.json())
-    .catch((e) => console.log(e));
-
   return (
     <>
       <div className="z-10 w-full px-5 xl:px-0">
@@ -42,28 +35,6 @@ export default async function Home() {
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
           style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
         >
-          {/* <a
-            className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
-            href={DEPLOY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              className="h-4 w-4 group-hover:text-black"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 4L20 20H4L12 4Z"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <p>Deploy to Vercel</p>
-          </a> */}
           <a
             className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-[#0A66C2] bg-[#0A66C2] px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-[#0A66C2]"
             href="https://www.linkedin.com/in/kaynelee" // Replace with your LinkedIn profile URL
@@ -101,80 +72,117 @@ export default async function Home() {
 
         </div>
       </div>
-      <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, large }) => (
-          <Card
-            key={title}
-            title={title}
-            description={description}
-            demo={
-              title === "Beautiful, reusable components" ? (
-                <ComponentGrid />
-              ) : (
-                demo
-              )
-            }
-            large={large}
-          />
-        ))}
+      <div className="my-10 grid w-[70%] max-w-screen-xl animate-fade-up grid-cols-1 gap-7 px-5 md:grid-cols-3 xl:px-0">
+        {/* Feature 1 */}
+        <div
+          className="flex flex-col align-center justify-center relative col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md md:col-span-1"
+        >
+          <div className="h-[60%] flex flex-col justify-between align-center">
+            <div className="mx-auto max-w-md text-2xl font-display text-center ">
+              Past Experiences
+            </div>
+            <div className="flex flex-row justify-around">
+              <Image 
+                src={CODE}
+                alt="kayne"
+                className=""
+                height={120}
+              />
+            </div>
+          </div>
+
+        </div>
+
+        {/* Feature 2 */}
+        <div
+          className="relative col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
+        >
+          <div className="flex h-[300px] items-center justify-center">
+            <Image 
+              src={PROFILE}
+              alt="kayne"
+              className="shadow-md rounded-full"
+              width={200}
+              height={200}
+            />
+          </div>
+        </div>
+
+        {/* Feature 3 */}
+        <div
+          className="flex flex-col relative items-center justify-center h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
+        >
+          <div className="h-[60%] flex flex-col justify-between align-center">
+            <div className="mx-auto max-w-md text-2xl font-display text-center ">
+              Tech Stack
+            </div>
+            <div className="flex flex-row justify-around">
+              <Image 
+                src={TECH}
+                alt="kayne"
+                className=""
+                height={120}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Feature 4 */}
+        <div
+          className="flex flex-col relative items-center justify-center col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
+        >
+          <div className="h-[60%] flex flex-col justify-between align-center">
+            <div className="mx-auto max-w-md text-2xl font-display text-center ">
+              Extra-Curriculars
+            </div>
+            <div className="flex flex-row justify-around">
+              <Image 
+                src={SOCIAL}
+                alt="kayne"
+                className=""
+                height={120}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Feature 5 */}
+        <div
+          className="flex flex-col relative items-center justify-center col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
+        >
+          <div className="h-[60%] flex flex-col justify-between align-center">
+            <div className="mx-auto max-w-md text-2xl font-display text-center ">
+              Education
+            </div>
+            <div className="flex flex-row justify-around">
+              <Image 
+                src={EDUCATION}
+                alt="kayne"
+                className=""
+                height={120}
+              />
+            </div>
+          </div>
+        </div>
+        {/* Feature 6 */}
+        <div
+          className="flex flex-col relative items-center justify-center col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
+        >
+          <div className="h-[60%] flex flex-col justify-between align-center">
+            <div className="mx-auto max-w-md text-2xl font-display text-center ">
+              Interests
+            </div>
+            <div className="flex flex-row justify-around">
+              <Image 
+                src={INTERESTS}
+                alt="kayne"
+                className=""
+                height={120}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
 }
-
-const features = [
-  {
-    title: "Beautiful, reusable components",
-    description:
-      "Pre-built beautiful, a11y-first components, powered by [Tailwind CSS](https://tailwindcss.com/), [Radix UI](https://www.radix-ui.com/), and [Framer Motion](https://framer.com/motion)",
-    large: true,
-  },
-  {
-    title: "Performance first",
-    description:
-      "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.",
-    demo: <WebVitals />,
-  },
-  {
-    title: "One-click Deploy",
-    description:
-      "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
-    demo: (
-      <a href={DEPLOY_URL}>
-        <Image
-          src="https://vercel.com/button"
-          alt="Deploy with Vercel"
-          width={120}
-          height={30}
-          unoptimized
-        />
-      </a>
-    ),
-  },
-  {
-    title: "Built-in Auth + Database",
-    description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
-    demo: (
-      <div className="flex items-center justify-center space-x-20">
-        <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
-        <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} />
-      </div>
-    ),
-  },
-  {
-    title: "Hooks, utilities, and more",
-    description:
-      "Precedent offers a collection of hooks, utilities, and `@vercel/og`",
-    demo: (
-      <div className="grid grid-flow-col grid-rows-3 gap-10 p-10">
-        <span className="font-mono font-semibold">useIntersectionObserver</span>
-        <span className="font-mono font-semibold">useLocalStorage</span>
-        <span className="font-mono font-semibold">useScroll</span>
-        <span className="font-mono font-semibold">nFormatter</span>
-        <span className="font-mono font-semibold">capitalize</span>
-        <span className="font-mono font-semibold">truncate</span>
-      </div>
-    ),
-  },
-];
