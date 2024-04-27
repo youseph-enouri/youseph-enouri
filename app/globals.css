@@ -5,7 +5,7 @@
 .flip-container {
 
     perspective: 1000px;
-    width: 300px;
+    width: 350px;
     height: 190px;
     padding: 10px;
   }
@@ -37,13 +37,13 @@
   
   .front {
     background-color: white;
-    border: 1px solid gray;
+    border: 1px solid #d3d3d3;
   }
   
   .back {
-    background-color: #f8f8f8;
+    background-color: white;
     color: black;
     transform: rotateY(180deg);
-    border: 1px solid gray;
+    border: 1px solid #d3d3d3;
   }
   

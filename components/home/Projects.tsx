@@ -11,18 +11,18 @@ import QTMA from "public/QTMA.png"
 import ICONS from "public/ICONS.png"
 import Image from "next/image";
 
-const Extra = ({
-  showExtra,
-  setShowExtra,
+const Projects = ({
+  showProjects,
+  setShowProjects,
 }: {
-  showExtra: boolean;
-  setShowExtra: Dispatch<SetStateAction<boolean>>;
+  showProjects: boolean;
+  setShowProjects: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
-    <Modal showModal={showExtra} setShowModal={setShowExtra}>
+    <Modal showModal={showProjects} setShowModal={setShowProjects}>
       <div className="w-full overflow-hidden md:max-w-4xl md:rounded-2xl md:border md:border-gray-100 md:shadow-xl">
         <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16">
-            <h3 className="font-display text-2xl font-bold">Extra-Curricular Activities</h3>
+            <h3 className="font-display text-2xl font-bold">Projects</h3>
             <div className="bg-[#4A4A4A] w-[100%] h-0.5"></div>
             <div className="flex flex-row flex-wrap justify-center">
                 <div className="flip-container overflow-hidden">
@@ -87,20 +87,20 @@ Acted as a dynamic leader within the development team, directly managing a sub-t
   );
 };
 
-export function useExtra() {
-  const [showExtra, setShowExtra] = useState(false);
+export function useProjects() {
+  const [showProjects, setShowProjects] = useState(false);
 
   const DemoModalCallback = useCallback(() => {
     return (
-      <Extra
-        showExtra={showExtra}
-        setShowExtra={setShowExtra}
+      <Projects
+        showProjects={showProjects}
+        setShowProjects={setShowProjects}
       />
     );
-  }, [showExtra, setShowExtra]);
+  }, [showProjects, setShowProjects]);
 
   return useMemo(
-    () => ({ setShowExtra, Extra: DemoModalCallback }),
-    [setShowExtra, DemoModalCallback],
+    () => ({ setShowProjects, Projects: DemoModalCallback }),
+    [setShowProjects, DemoModalCallback],
   );
 }

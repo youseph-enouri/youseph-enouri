@@ -10,7 +10,7 @@ export const metadata = {
   title: "Kayne Lee",
   description:
     "Kayne Lee's Portfolio",
-  metadataBase: "kayne.ico",
+  metadataBase: "favicon.ico",
 };
 
 export default async function RootLayout({
