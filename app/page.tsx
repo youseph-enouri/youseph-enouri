@@ -8,20 +8,20 @@ import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
 import PROFILE from "public/kayne.jpg"
-import SMITH from "public/SMITH.png"
-import DEBACLE from "public/Debacle.png"
-import STRAFFIC from "public/STRAFFIC.png"
 import TECH from "public/TECH.png"
 import CODE from "public/CODE.png"
 import SOCIAL from "public/SOCIAL.png"
-import EDUCATION from "public/EDUCATION.png"
+import PROJECTS from "public/PROJECTS.png"
 import INTERESTS from "public/INTERESTS.png"
 import Modal from "@/components/Modal"
-import { useDemoModal } from "@/components/home/PastExperiences";
+import { usePastExperiences } from "@/components/home/PastExperiences";
+import { useTechStack } from "@/components/home/TechStack";
 import { useState } from "react";
 
 export default function Home() {
-  const { setShowDemoModal, DemoModal } = useDemoModal();
+  const { setShowPastExperiences, PastExperiences } = usePastExperiences();
+  const { setShowTechStack, TechStack } = useTechStack();
+  
   
   return (
     <>
@@ -82,8 +82,8 @@ export default function Home() {
       <div className="my-10 grid w-[70%] max-w-screen-xl animate-fade-up grid-cols-1 gap-7 px-5 md:grid-cols-3 xl:px-0">
         {/* Feature 1 */}
         <div
-          onClick={() => setShowDemoModal(true)}
-          className="flex flex-col align-center justify-center relative col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md md:col-span-1"
+          onClick={() => setShowPastExperiences(true)}
+          className=" cursor-pointer flex flex-col align-center justify-center relative col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md md:col-span-1"
         >
           <div className="h-[60%] flex flex-col justify-between align-center">
             <div className="mx-auto max-w-md text-2xl font-display text-center ">
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <DemoModal />
+        <PastExperiences />
         {/* Feature 2 */}
         <div
           className="relative col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
@@ -117,7 +117,8 @@ export default function Home() {
 
         {/* Feature 3 */}
         <div
-          className="flex flex-col relative items-center justify-center h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
+          onClick={() => setShowTechStack(true)}
+          className="flex cursor-pointer flex-col relative items-center justify-center h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
         >
           <div className="h-[60%] flex flex-col justify-between align-center">
             <div className="mx-auto max-w-md text-2xl font-display text-center ">
@@ -133,7 +134,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+        <TechStack />
         {/* Feature 4 */}
         <div
           className="flex flex-col relative items-center justify-center col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
@@ -159,11 +160,11 @@ export default function Home() {
         >
           <div className="h-[60%] flex flex-col justify-between align-center">
             <div className="mx-auto max-w-md text-2xl font-display text-center ">
-              Education
+              Projects
             </div>
             <div className="flex flex-row justify-around">
               <Image 
-                src={EDUCATION}
+                src={PROJECTS}
                 alt="kayne"
                 className=""
                 height={120}

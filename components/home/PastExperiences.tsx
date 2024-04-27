@@ -7,52 +7,69 @@ import {
   useMemo,
 } from "react";
 import Image from "next/image";
+import SMITH from "public/SMITH.png"
+import DEBACLE from "public/Debacle.png"
+import STRAFFIC from "public/STRAFFIC.png"
 
-const DemoModal = ({
-  showDemoModal,
-  setShowDemoModal,
+const PastExperiences = ({
+  showPastExperiences,
+  setShowPastExperiences,
 }: {
-  showDemoModal: boolean;
-  setShowDemoModal: Dispatch<SetStateAction<boolean>>;
+  showPastExperiences: boolean;
+  setShowPastExperiences: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
-    <Modal showModal={showDemoModal} setShowModal={setShowDemoModal}>
+    <Modal showModal={showPastExperiences} setShowModal={setShowPastExperiences}>
       <div className="w-full overflow-hidden md:max-w-4xl md:rounded-2xl md:border md:border-gray-100 md:shadow-xl">
         <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16">
-          <a href="https://precedent.dev">
-            <Image
-              src="/logo.png"
-              alt="Precedent Logo"
-              className="h-10 w-10 rounded-full"
-              width={20}
-              height={20}
-            />
-          </a>
-          <h3 className="font-display text-2xl font-bold">Precedent</h3>
-          <p className="text-sm text-gray-500">
-            Precedent is an opinionated collection of components, hooks, and
-            utilities for your Next.js project.
-          </p>
+          <h3 className="font-display text-2xl font-bold">Past Experiences</h3>
+          <div className="bg-[#4A4A4A] w-[100%] h-0.5"></div>
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-col  gap-1">
+                  <div className="flex flex-row justify-between">
+                    <h2 className="text-left text-xl font-bold">Teaching Assistant <span className="font-normal text-[#4A4A4A]"> - Queen's</span></h2>
+                    <span className="font-normal">Winter 2024</span>
+                  </div>
+                  <p className=" text-left text-sm">Delivered comprehensive support to over 200 students specializing in computer programming concepts ensuring proficiency. Addressed
+                    individual queries with precision, fostering a strong foundation of key principles and delivering feedback on assignments for improvement.
+                    Demonstrated leadership, communication, and problem-solving skills through active engagement with students and collaborative teamwork.
+                    Leveraged cutting-edge tools such as CLion and Gradescope, streamlining processes and facilitating a dynamic exchange of information.</p>
+                </div>
+              </div>
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-col  gap-1">
+                  <div className="flex flex-row justify-between">
+                    <h2 className="text-left text-xl font-bold">Software Engineer Intern <span className="font-normal text-[#4A4A4A]"> - Debacle inc.</span></h2>
+                    <span className="font-normal">Winter 2024</span>
+                  </div>
+                  <p className=" text-sm text-left">Engineered a highly effective Shopify plug-in app, leveraging data from over 250 Shopify stores worldwide. Employing JSON, Python, and
+                    advanced machine-learning techniques to generate keywords for user recommendation enhancing user engagement and sales conversion rates.
+                    Implemented secure authentication with Shopify AUTH and optimized query efficiency with GraphQL resulting in a 30% reduction in response time
+                    Addressed and debugged complex challenges including Admin Block issues resulting in a 40% increase in app stability and optimized performance.</p>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </Modal>
   );
 };
 
-export function useDemoModal() {
-  const [showDemoModal, setShowDemoModal] = useState(false);
+export function usePastExperiences() {
+  const [showPastExperiences, setShowPastExperiences] = useState(false);
 
   const DemoModalCallback = useCallback(() => {
     return (
-      <DemoModal
-        showDemoModal={showDemoModal}
-        setShowDemoModal={setShowDemoModal}
+      <PastExperiences
+        showPastExperiences={showPastExperiences}
+        setShowPastExperiences={setShowPastExperiences}
       />
     );
-  }, [showDemoModal, setShowDemoModal]);
+  }, [showPastExperiences, setShowPastExperiences]);
 
   return useMemo(
-    () => ({ setShowDemoModal, DemoModal: DemoModalCallback }),
-    [setShowDemoModal, DemoModalCallback],
+    () => ({ setShowPastExperiences, PastExperiences: DemoModalCallback }),
+    [setShowPastExperiences, DemoModalCallback],
   );
 }
