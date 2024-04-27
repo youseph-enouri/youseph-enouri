@@ -25,43 +25,45 @@ const TechStack = ({
 }: {
   showTechStack: boolean;
   setShowTechStack: Dispatch<SetStateAction<boolean>>;
+
 }) => {
+
   return (
     <Modal showModal={showTechStack} setShowModal={setShowTechStack}>
       <div className="w-full overflow-hidden md:max-w-4xl md:rounded-2xl md:border md:border-gray-100 md:shadow-xl">
         <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16">
           <h3 className="font-display text-2xl font-bold">Tech Stack</h3>
           <div className="bg-[#4A4A4A] w-[100%] h-0.5"></div>
-            <div className="flex flex-row flex-wrap justify-center pt-3 gap-3">
-              <div className="rounded-full border-2 border-[#36CEE9] w-[125px] h-[125px] flex justify-center items-center">
+            <div className=" flex flex-row flex-wrap justify-center pt-3 gap-3">
+              <div className="float rounded-full border-[1px] border-[#36CEE9] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={C}
                   alt="kayne"
                   width={80}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#33BAEA] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#33BAEA] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={CP}
                   alt="kayne"
                   width={80}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#2FA3EC] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#2FA3EC] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={PYTHON}
                   alt="kayne"
                   width={80}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#2C91ED] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#2C91ED] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={JAVA}
                   alt="kayne"
                   width={48}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#2C91ED] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#2C91ED] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={JS}
                   alt="kayne"
@@ -69,42 +71,42 @@ const TechStack = ({
                   width={70}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#30A9EB] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#30A9EB] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={TS}
                   alt="kayne"
                   width={70}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#2C90ED] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#2C90ED] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={AWS}
                   alt="kayne"
                   width={80}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#2878EE] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#2878EE] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={NEXT}
                   alt="kayne"
                   width={80}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#2FA4EC] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#2FA4EC] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={REACT}
                   alt="kayne"
                   width={80}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#2B89ED] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#2B89ED] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={SQL}
                   alt="kayne"
                   width={80}
                 />
               </div>
-              <div className="rounded-full border-2 border-[#2670EF] w-[125px] h-[125px] flex justify-center items-center">
+              <div className="rounded-full border-[1px] border-[#2670EF] w-[125px] h-[125px] flex justify-center items-center">
                 <Image 
                   src={GIT}
                   alt="kayne"

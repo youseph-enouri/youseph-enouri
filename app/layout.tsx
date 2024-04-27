@@ -11,7 +11,6 @@ export const metadata = {
   description:
     "Kayne Lee's Portfolio",
   metadataBase: "kayne.ico",
-  themeColor: "#FFF",
 };
 
 export default async function RootLayout({
