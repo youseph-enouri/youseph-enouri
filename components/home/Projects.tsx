@@ -7,12 +7,10 @@ import {
   useMemo,
 } from "react";
 import NUMERAI from "public/NumerAI.png"
-import NBA from "public/NBA.png"
 import SMART from "public/Smart.png"
-import SPREADSHEET from "public/Spreadsheet.png"
 import BITCOIN from "public/BITCOIN.png"
-import WORDLE from "public/WORDLE.png"
-import PACMAN from "public/PACMAN.png"
+import CAPTION from "public/Caption.png"
+import Image from "next/image";
 
 const Projects = ({
   showProjects,
@@ -28,22 +26,44 @@ const Projects = ({
         <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16">
             <h3 className="font-display text-2xl font-bold">Projects</h3>
             <div className="bg-[#4A4A4A] w-[100%] h-0.5"></div>
-            <div className="flex flex-row flex-wrap justify-center">
+            <div className="flex flex-row gap-3 flex-wrap justify-center align-center">
                 <div className="flex flex-row gap-5 flex-wrap justify-center">
                     {PROJECTS.map((work) => (
                         <button
-                            className="text-lg"
+                            className="text-xl"
                             onClick={() => {
                             setProject(work);
                             }}
                             style={{
-                                textDecoration: project.name === work.name ? "underline" : "none"
+                                borderBottom: project.name === work.name? "solid 2px #30A9EB": "solid 2px white" 
                             }}
                         >
                             {work.name}
                         </button>
                     ))}
                 </div>
+                <div className="flex flex-col w-[90%] border-[1px] rounded-[12px] shadow-md border-[#d3d3d3] p-4 items-center gap-2">
+                  <h2 className="font-bold text-lg">{project.name}</h2>
+                  <div className="flex flex-row justify-center gap-5">
+                    {project.technologies.map((tech) => (
+                      <div className="border-2 rounded-xl border-gray-200 px-5">
+                        <p>{tech}</p>
+                      </div>
+                      ))}
+                   </div>
+                   <div className="w-[90%] flex justify-center">
+                    {project.highlights}
+                  </div>
+                  <a href={project.github} target="blank">
+                    <Image 
+                                  src={project.image}
+                                  alt="QTMA"
+                                  width={200}
+                                  height={100} // Assuming you want to control the height as well
+                                  />
+                  </a>
+                </div>
+
             </div>
         </div>
       </div>
@@ -70,11 +90,20 @@ export function useProjects() {
 }
 
 export const PROJECTS = [
+  {
+    name: "Caption Generator",
+    technologies: ["JSON", "AWS", "Next.js", "S3"],
+    highlights: 
+      "Developed a Next.js application facilitating user-generated video uploads, integrating AWS S3 for efficient media storage to enhance system performance and handling of high-resolution video content leading to 50% reduction in server load and a 20% increase in upload speed. Engineered a dynamic captioning feature utilizing AWS Transcribe Services enabling users to personalize captions by adjusting fonts, colors, and text positioning. The system’s architecture ensured a seamless process of video-to-text conversion, with an additional layer of stylization.",
+    image: CAPTION,
+    github: "https://github.com/kayne-lee/Caption-Creator",
+    website: "https://numer.ai/~kaynelee",
+  },
     {
       name: "NumerAI Model",
       technologies: ["Python", "API"],
       highlights: 
-        "Developped a ML model to participate in the NumerAI tournament to trade crypto currencies. Currently have a 12% profit and ranked top 25 in the season. Used a LightGBM model to process the data given by NumerAI.",
+        "Developped a ML model to participate in the NumerAI tournament to trade crypto currencies. Currently have a 12% profit and ranked top 25 in the season. Used NumerAI's API to parse and organize the data and then used a LightGBM model to process the data given by NumerAI.",
       image: NUMERAI,
       github: "https://github.com/kayne-lee/numerAIModel",
       website: "https://numer.ai/~kaynelee",
@@ -88,15 +117,6 @@ export const PROJECTS = [
       github: "https://github.com/kayne-lee/smartplate",
       website: "https://youtu.be/L--EFs7gULE",
     },
-    {
-      name: "NBA Game Predictor",
-      technologies: ["Python", "Jupyter Notebook"],
-      highlights: 
-        "Created an algorithm to predict the outcome of future NBA gamers. This was done by web scraping NBA box scores through BeautifulSoup and parsed the box scores into Pandas data frames. This data was used to train a machine learning model to make predictions.",
-      image: NBA,
-      github: "https://github.com/kayne-lee/NBA-Game-Predictor",
-      website: "",
-    },
       {
       name: "Bitcoin Predictor",
       technologies: ["Python", "Jupyter Notebook"],
@@ -105,15 +125,6 @@ export const PROJECTS = [
       image: BITCOIN,
       github: "https://github.com/kayne-lee/bitcoin-predictor",
       website: "",
-    },
-    {
-      name: "Wordle",
-      technologies: ["React.js", "Node.js", "JSON"],
-      highlights: 
-        "Created a clone of the New York Times game, Wordle, using React.js. Implemented all of the rules used in the real game. This project used a database using JSON. The project would take in user input, and would check for the correct letters. Letters would display different colours based off the results.",
-      image: WORDLE,
-      github: "https://github.com/kayne-lee/kayneWordle",
-      website: "https://youtu.be/GgezcaMuh8o",
     },
     
   
