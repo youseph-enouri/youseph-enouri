@@ -18,12 +18,14 @@ import { usePastExperiences } from "@/components/home/PastExperiences";
 import { useTechStack } from "@/components/home/TechStack";
 import { useExtra } from "@/components/home/Extra"
 import { useProjects } from "@/components/home/Projects";
+import { useInterests } from "@/components/home/Interests";
 
 export default function Home() {
   const { setShowPastExperiences, PastExperiences } = usePastExperiences();
   const { setShowTechStack, TechStack } = useTechStack();
   const { setShowExtra, Extra } = useExtra();
   const { setShowProjects, Projects } = useProjects();
+  const { setShowInterests, Interests } = useInterests();
   
   return (
     <>
@@ -179,7 +181,8 @@ export default function Home() {
         <Projects />
         {/* Feature 6 */}
         <div
-          className="flex flex-col relative items-center justify-center col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
+        onClick={() => setShowInterests(true)}
+          className="flex cursor-pointer flex-col relative items-center justify-center col-span-1 h-[300px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
         >
           <div className="h-[60%] flex flex-col justify-between align-center">
             <div className="mx-auto max-w-md text-2xl font-display text-center ">
@@ -195,6 +198,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Interests />
       </div>
     </>
   );
