@@ -28,7 +28,7 @@ const PastExperiences = ({
               <div className="flex flex-row justify-between">
                 <div className="flex flex-col  gap-1">
                   <div className="flex flex-row justify-between">
-                    <h2 className="text-left text-xl font-bold">Teaching Assistant <span className="font-normal text-[#4A4A4A]"> - Queen's</span></h2>
+                    <h2 className="text-left text-xl font-bold">Teaching Assistant <span className="font-normal text-[#4A4A4A]"> - Queen&apos;s Univesity</span></h2>
                     <span className="font-normal">Winter 2024</span>
                   </div>
                   <p className=" text-left text-sm">Delivered comprehensive support to over 200 students specializing in computer programming concepts ensuring proficiency. Addressed

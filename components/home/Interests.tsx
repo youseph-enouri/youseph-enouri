@@ -28,7 +28,7 @@ const Interests = ({
             <div className="bg-[#4A4A4A] w-[100%] h-0.5"></div>
             <div className="flex flex-row flex-wrap gap-5 justify-center">
                     {INTERESTS.map((interests) => (
-                        <div className="flex flex-col gap-5 border-2 rounded-xl border-gray-200 p-5 items-center">
+                        <div key={interests.name} className="flex flex-col gap-5 border-2 rounded-xl border-gray-200 p-5 items-center">
                             {interests.name}
                             <Image 
                             className="rounded-lg"

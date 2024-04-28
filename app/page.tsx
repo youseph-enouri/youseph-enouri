@@ -34,7 +34,7 @@ export default function Home() {
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] text-3xl md:text-xxl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-          Computer Engineering Student @ Queen's University
+          Computer Engineering Student @ Queen&apos;s University
         </h1>
         <div
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"

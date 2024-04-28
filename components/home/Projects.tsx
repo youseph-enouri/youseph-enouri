@@ -30,6 +30,7 @@ const Projects = ({
                 <div className="flex flex-row gap-5 flex-wrap justify-center">
                     {PROJECTS.map((work) => (
                         <button
+                          key={project.name}
                             className="text-xl"
                             onClick={() => {
                             setProject(work);
@@ -46,7 +47,7 @@ const Projects = ({
                   <h2 className="font-bold text-lg">{project.name}</h2>
                   <div className="flex flex-row justify-center gap-5">
                     {project.technologies.map((tech) => (
-                      <div className="border-2 rounded-xl border-gray-200 px-5">
+                      <div key={project.name} className="border-2 rounded-xl border-gray-200 px-5">
                         <p>{tech}</p>
                       </div>
                       ))}
