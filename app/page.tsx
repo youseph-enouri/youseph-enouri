@@ -1,19 +1,13 @@
 "use client"
 
-import Card from "@/components/home/card";
-import { DEPLOY_URL } from "@/lib/constants";
-import { Github, Twitter } from "@/components/shared/icons";
-import WebVitals from "@/components/home/web-vitals";
-import ComponentGrid from "@/components/home/component-grid";
+
 import Image from "next/image";
-import { nFormatter } from "@/lib/utils";
 import PROFILE from "public/kayne.jpg"
 import TECH from "public/TECH.png"
 import CODE from "public/CODE.png"
 import SOCIAL from "public/SOCIAL.png"
 import PROJECTS from "public/PROJECTS.png"
 import INTERESTS from "public/INTERESTS.png"
-import Modal from "@/components/Modal"
 import { usePastExperiences } from "@/components/home/PastExperiences";
 import { useTechStack } from "@/components/home/TechStack";
 import { useExtra } from "@/components/home/Extra"
