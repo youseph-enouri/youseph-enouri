@@ -102,7 +102,7 @@ export const PROJECTS = [
     name: "Computer Vision Keyboard",
     technologies: ["Python", "CV2", "MediaPipe"],
     highlights: 
-      "Developed a Next.js application facilitating user-generated video uploads, integrating AWS S3 for efficient media storage to enhance system performance and handling of high-resolution video content leading to 50% reduction in server load and a 20% increase in upload speed. Engineered a dynamic captioning feature utilizing AWS Transcribe Services enabling users to personalize captions by adjusting fonts, colors, and text positioning. The system’s architecture ensured a seamless process of video-to-text conversion, with an additional layer of stylization.",
+      "Developed a Python application using OpenCV and MediaPipe to facilitate hands-free typing by recognizing hand gestures through a webcam. Integrated a virtual keyboard interface to provide seamless and intuitive user interaction, leading to a 30% increase in typing speed for users with limited mobility. Engineered a robust hand detection system utilizing MediaPipe Hand landmarks to accurately calculate the distance between the index and middle fingers, mapping gestures to keyboard characters with 95% accuracy. The application includes predictive text and auto-correction features, enabling users to personalize the typing experience through customizable keyboard layouts, gesture sensitivity, and language support. The system's architecture ensures a high degree of accuracy and responsiveness, with a dynamic virtual keyboard that adapts to different hand gestures and language preferences.",
     video: "AIKEYBOARD.mp4",
     github: "https://github.com/kayne-lee/Computer-Vision-Keyboard",
   },
