@@ -56,12 +56,19 @@ const Projects = ({
                     {project.highlights}
                   </div>
                   <a href={project.github} target="blank">
-                    <Image 
-                                  src={project.image}
-                                  alt="QTMA"
-                                  width={200}
-                                  height={100} // Assuming you want to control the height as well
-                                  />
+                    {project.video ? (
+                      <video width="350" autoPlay loop>
+                        <source src={`/${project.video}`} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <Image
+                        src={`/${project.image}`}
+                        alt={project.name}
+                        width={200}
+                        height={100}
+                      />
+                    )}
                   </a>
                 </div>
 
@@ -92,40 +99,44 @@ export function useProjects() {
 
 export const PROJECTS = [
   {
+    name: "Computer Vision Keyboard",
+    technologies: ["Python", "CV2", "MediaPipe"],
+    highlights: 
+      "Developed a Next.js application facilitating user-generated video uploads, integrating AWS S3 for efficient media storage to enhance system performance and handling of high-resolution video content leading to 50% reduction in server load and a 20% increase in upload speed. Engineered a dynamic captioning feature utilizing AWS Transcribe Services enabling users to personalize captions by adjusting fonts, colors, and text positioning. The system’s architecture ensured a seamless process of video-to-text conversion, with an additional layer of stylization.",
+    video: "AIKEYBOARD.mp4",
+    github: "https://github.com/kayne-lee/Computer-Vision-Keyboard",
+  },
+  {
     name: "Caption Generator",
     technologies: ["JSON", "AWS", "Next.js", "S3"],
     highlights: 
       "Developed a Next.js application facilitating user-generated video uploads, integrating AWS S3 for efficient media storage to enhance system performance and handling of high-resolution video content leading to 50% reduction in server load and a 20% increase in upload speed. Engineered a dynamic captioning feature utilizing AWS Transcribe Services enabling users to personalize captions by adjusting fonts, colors, and text positioning. The system’s architecture ensured a seamless process of video-to-text conversion, with an additional layer of stylization.",
-    image: CAPTION,
+    image: "Caption.png",
     github: "https://github.com/kayne-lee/Caption-Creator",
-    website: "https://numer.ai/~kaynelee",
   },
     {
       name: "NumerAI Model",
       technologies: ["Python", "API"],
       highlights: 
         "Developped a ML model to participate in the NumerAI tournament to trade crypto currencies. Currently have a 12% profit and ranked top 25 in the season. Used NumerAI's API to parse and organize the data and then used a LightGBM model to process the data given by NumerAI.",
-      image: NUMERAI,
+      image: "NumerAI.png",
       github: "https://github.com/kayne-lee/numerAIModel",
-      website: "https://numer.ai/~kaynelee",
     },
     {
       name: "SmartPlate",
       technologies: ["Next.js", "OpenAI"],
       highlights: 
         "Created a Next.js application integrated with OpenAI API to create a budget friendly meal planner. Took data from the user and input into a GPT-3.5-Turbo model and output a list of meals along with ingredients and price of the meal. These ingredients could then be added to a grocery list where all the ingredients needed are stored along with total price, number of meals, and average cost per meal spent.",
-      image: SMART,
+      image: "Smart.png",
       github: "https://github.com/kayne-lee/smartplate",
-      website: "https://youtu.be/L--EFs7gULE",
     },
       {
       name: "Bitcoin Predictor",
       technologies: ["Python", "Jupyter Notebook"],
       highlights: 
         "Developed an algorithm to predict the future price of Bitcoin using historical price and sentimental data. This project used USD/BTC price from Yahoo Fincance, along with data from wikipedia about edits to the Bitcoin page. These datas were merged then used to train a random forest model then switched to XGBoost model to improve accuracy. Developped a backtesting system and use a robust error metric to determine if the algorithm is performing well. This system is also able to make next-day predictions.",
-      image: BITCOIN,
+      image: "BITCOIN.png",
       github: "https://github.com/kayne-lee/bitcoin-predictor",
-      website: "",
     },
     
   
