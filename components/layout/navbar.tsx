@@ -27,9 +27,6 @@ export default function NavBar() {
             ></Image>
             <p>Kayne Lee</p>
           </Link>
-          <div>
-            <a href="./Resume - Kayne Lee.pdf" target="_blank" className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black">Resume</a>
-          </div>
         </div>
       </div>
     </>
