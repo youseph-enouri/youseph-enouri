@@ -2,6 +2,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { sfPro, inter } from "./fonts";
+import { Karla } from "next/font/google";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
@@ -13,6 +14,8 @@ export const metadata = {
   metadataBase: "favicon.ico",
 };
 
+const karla = Karla({ subsets: ["latin"], weight: ["400", "700"] });
+
 export default async function RootLayout({
   children,
 }: {
@@ -20,7 +23,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable)}>
+      <body className={karla.className}>
         <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
         <Suspense fallback="...">
           <Navbar />
