@@ -11,7 +11,7 @@ export const metadata = {
   title: "Youseph Enouri",
   description:
     "Youseph Enouri's Portfolio",
-  metadataBase: "inverted_favicon.ico",
+  metadataBase: "favicon.ico",
 };
 
 const karla = Karla({ subsets: ["latin"], weight: ["400", "700"] });
