@@ -155,33 +155,49 @@ const TechStack = ({
   setShowTechStack: Dispatch<SetStateAction<boolean>>;
 }) => {
   // Define technology slugs for IconCloud
-  const slugs = [
-    "C.png",
-    "C++.png",
-    "PYTHON.png",
-    "SolidWorks.png",
-    "ANSYS.png",
-    "autocad.png",     
-    "NEXT.png",
-    "GIT.png",
-    "HTML.png",
-    "CSS.png",
-    "mastercam.png",
-    "excel.png",
-    "PowerBI.png",
-  ];
-
+  const techIcons = [
+  { src: "C.png", size: 70 },
+  { src: "C++.png", size: 70 },
+  { src: "PYTHON.png", size: 75 },
+  { src: "SolidWorks.png", size: 60 },
+  { src: "ANSYS.png", size: 65 },
+  { src: "autocad.png", size: 60 },
+  { src: "NEXT.png", size: 70 },
+  { src: "GIT.png", size: 60 },
+  { src: "HTML.png", size: 75 },
+  { src: "CSS.png", size: 75 },
+  { src: "mastercam.png", size: 55 },
+  { src: "excel.png", size: 65 },
+  { src: "PowerBI.png", size: 60 },
+];
   return (
     <Modal showModal={showTechStack} setShowModal={setShowTechStack}>
-      <div className="w-full overflow-hidden md:max-w-4xl md:rounded-2xl md:border md:border-gray-100 md:shadow-xl">
-        <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16">
-          <h3 className="font-display text-2xl font-bold">Tech Stack</h3>
-          <div className="bg-[#4A4A4A] w-[100%] h-0.5"></div>
-          <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background pb-20 pt-8 mx-auto">
-            <IconCloud imageArray={slugs} />
-          </div>
-        </div>
-      </div>
+      <div className="flex flex-row flex-wrap justify-center pt-3 gap-4">
+  {techIcons.map(({ src, size }, idx) => (
+    <div
+      key={idx}
+      className="rounded-full border border-blue-400 w-[125px] h-[125px] flex justify-center items-center"
+    >
+      <Image
+        src={`/icons/${src}`} // or wherever your images are
+        alt={src}
+        width={size}
+        height={size}
+        className="object-contain"
+      />
+    </div>
+  ))}
+</div>
+
+      {/* <div className="w-full overflow-hidden md:max-w-4xl md:rounded-2xl md:border md:border-gray-100 md:shadow-xl"> */}
+        {/* <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16"> */}
+          {/* <h3 className="font-display text-2xl font-bold">Tech Stack</h3> */}
+          {/* <div className="bg-[#4A4A4A] w-[100%] h-0.5"></div> */}
+          {/* <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background pb-20 pt-8 mx-auto"> */}
+            {/* <IconCloud imageArray={slugs} /> */}
+          {/* </div></div> */}
+        {/* </div> */}
+      {/* {</div> */} */
     </Modal>
   );
 };
@@ -201,5 +217,5 @@ export function useTechStack() {
   return useMemo(
     () => ({ setShowTechStack, TechStack: TechStackCallback }),
     [setShowTechStack, TechStackCallback],
-  );
+  
 }
