@@ -28,39 +28,39 @@ const PastExperiences = ({
             <div className="flex flex-row justify-between">
                 <div className="flex flex-col  gap-1">
                   <div className="flex flex-row justify-between">
-                    <h2 className="text-left text-xl font-bold">Software Engineer Intern<span className="font-normal text-[#4A4A4A]"> - STraffic America</span></h2>
-                    <span className="font-normal">May - August 2024</span>
+                    <h2 className="text-left text-xl font-bold">Manufacturing Design Intern<span className="font-normal text-[#4A4A4A]"> - Tigercat Industries</span></h2>
+                    <span className="font-normal">Jan - August 2025</span>
                   </div>
                   <p className=" text-left text-sm">
-                  Developed computer vision models for fare collection, processing 300,000+ images with 97% accuracy using YOLOv10X, resulting in $10
-Million in additional revenues from fare evasion detection. Created and managed API endpoints ensuring secure data transmission via SSL/TLS and conducted real-time data processing for client-server communications. Architected and deployed an internal calendar system using Spring Boot and React, integrating RESTful APIs for efficient data handling
-and employing Spring Security for robust user protection.
+                  Designed and spearheaded several lean manufacturing improvements modelling and processing 65+ projects across multiple plants. Worked cross functionally with senior engineers to brainstorm and implement both dynamic and static designs.
+                  Created a large scale safety guard for sheave testing on the 6900 Grinder. Increased safety and convinience by 90%. Directed several weldments in-house and at bordering plants to ensure proper communication of engineering drawings.
+                  Created a VBA macro enabled priority tracker and weldment tracker to create cohesion between production and manufacturing designs, increasing productivity by 80%.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row justify-between">
                 <div className="flex flex-col  gap-1">
                   <div className="flex flex-row justify-between">
-                    <h2 className="text-left text-xl font-bold">Teaching Assistant <span className="font-normal text-[#4A4A4A]"> - Queen&apos;s Univesity</span></h2>
-                    <span className="font-normal">January - April 2024</span>
+                    <h2 className="text-left text-xl font-bold">Design and Validation Intern <span className="font-normal text-[#4A4A4A]"> - Skyjack Inc.</span></h2>
+                    <span className="font-normal"> May - August 2024</span>
                   </div>
                   <p className=" text-left text-sm">
-                  Guided 200+ students in mastering computer programming concepts, providing targeted feedback and resolving individual queries to ensure
-proficiency. Directed 5 team-based design projects, guiding students in applying engineering principle and managing project timelines, collaboration, and
-integration of technical, economic, and social factors.
+                  Scheduled and executed Master Schedule meetings to promtly update progress on engineering ongoing projects. Developed several automated spreadsheets accounting for daily tedious tasks. This increased productivity by 75%. Designed a Rotary Encoder Signal Conditioner compatible with eDAQ device for RPM and CAN data analysis on all machines.
+
                   </p>
                 </div>
               </div>
               <div className="flex flex-row justify-between">
                 <div className="flex flex-col  gap-1">
                   <div className="flex flex-row justify-between">
-                    <h2 className="text-left text-xl font-bold">Front End Developer<span className="font-normal text-[#4A4A4A]"> - Musical Moon</span></h2>
-                    <span className="font-normal">January - April 2024</span>
+                    <h2 className="text-left text-xl font-bold">Research Assistant<span className="font-normal text-[#4A4A4A]"> - University of Guelph</span></h2>
+                    <span className="font-normal">May 2023 - Jan 2025</span>
                   </div>
                   <p className=" text-sm text-left">
-                  Constructed the front-end for a social web platform using Next.js, serving over 1,000 active users, and reducing load times by 30% through
-server-side rendering. Implemented routing and authentication to deliver personalized and efficiently retrieve user-specific data. Integrated real-time data fetching using Next.js API routes for instant updates to user profiles, posts, and notifications, improving platform.
-Collaborated on UI/UX improvements, enhancing user engagement by designing intuitive interfaces and smooth navigation flows.
+                  Accompanied MSc and PhD candidates under professor supervision to complete ongoing research projects. Designed and fabricated an updated version of a copper electrode sensor to accurately convey data from flow patterns.
+                  This sensor has 40 electrodes in comparison to the past model with only 4, increasing credibility significantly. 
+                  Additionally I designed a prototype of a solar powered packed bed dehumidifier which proved through litterature reviews and a detailed mathematical model to efficiently generate water through atmospheric air.
+
                   </p>
                 </div>
               </div>

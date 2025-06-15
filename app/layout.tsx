@@ -8,10 +8,10 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Kayne Lee",
+  title: "Youseph Enouri",
   description:
-    "Kayne Lee's Portfolio",
-  metadataBase: "favicon.ico",
+    "Youseph Enouri's Portfolio",
+  metadataBase: "inverted_favicon.ico",
 };
 
 const karla = Karla({ subsets: ["latin"], weight: ["400", "700"] });

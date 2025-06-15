@@ -2,7 +2,7 @@
 
 
 import Image from "next/image";
-import PROFILE from "public/kayne.jpg"
+import PROFILE from "public/Youseph.jpg"
 import TECH from "public/TECH.png"
 import CODE from "public/CODE.png"
 import SOCIAL from "public/SOCIAL.png"
@@ -28,13 +28,13 @@ export default function Home() {
           className="py-4 animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-          Kayne Lee
+          Youseph Enouri
         </h1>
         <h1
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] text-3xl md:text-xxl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-          Computer Engineering Student @ Queen&apos;s University
+          Mechanical Engineering Student @ University of Guelph
         </h1>
         <div
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
@@ -42,7 +42,7 @@ export default function Home() {
         >
           <a
             className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-[#0A66C2] bg-[#0A66C2] px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-[#0A66C2]"
-            href="https://www.linkedin.com/in/kaynelee" // Replace with your LinkedIn profile URL
+            href="https://www.linkedin.com/in/youseph-enouri" // Replace with your LinkedIn profile URL
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -60,7 +60,7 @@ export default function Home() {
 
           <a
             className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
-            href="https://github.com/kayne-lee" // Replace with your GitHub profile URL
+            href="https://github.com/youseph-enouri" // Replace with your GitHub profile URL
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -90,7 +90,7 @@ export default function Home() {
             <div className="flex flex-row justify-around">
               <Image 
                 src={CODE}
-                alt="kayne"
+                alt="youseph"
                 className=""
                 height={120}
               />
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="flex h-[300px] items-center justify-center">
             <Image 
               src={PROFILE}
-              alt="kayne"
+              alt="youseph"
               className="shadow-md rounded-full"
               width={200}
               height={200}
@@ -125,7 +125,7 @@ export default function Home() {
             <div className="flex flex-row justify-around">
               <Image 
                 src={TECH}
-                alt="kayne"
+                alt="youseph"
                 className=""
                 height={120}
               />
@@ -145,7 +145,7 @@ export default function Home() {
             <div className="flex flex-row justify-around">
               <Image 
                 src={SOCIAL}
-                alt="kayne"
+                alt="youspeh"
                 className=""
                 height={120}
               />
@@ -165,7 +165,7 @@ export default function Home() {
             <div className="flex flex-row justify-around">
               <Image 
                 src={PROJECTS}
-                alt="kayne"
+                alt="youseph"
                 className=""
                 height={120}
               />
@@ -185,7 +185,7 @@ export default function Home() {
             <div className="flex flex-row justify-around">
               <Image 
                 src={INTERESTS}
-                alt="kayne"
+                alt="youseph"
                 className=""
                 height={120}
               />
