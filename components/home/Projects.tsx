@@ -55,20 +55,20 @@ const Projects = ({
                    <div className="w-[90%] flex justify-center">
                     {project.highlights}
                   </div>
-                  <a href={project.github} target="blank">
+                  {/* <a href={project.github} target="blank">
                     {project.video ? (
                       <video width="350" autoPlay loop>
                         <source src={`/${project.video}`} type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
-                    ) : (
+                    ) : ( */}
                       <Image
                         src={`/${project.image}`}
                         alt={project.name}
                         width={200}
                         height={100}
                       />
-                    )}
+                    
                   </a>
                 </div>
 
