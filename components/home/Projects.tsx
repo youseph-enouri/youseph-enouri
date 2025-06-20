@@ -152,6 +152,6 @@ export const PROJECTS = [
       //   "Designed and developed 4 Prop Stands to hold open the roof of Tigercats 800's machines. A turnbuckle is used in each rpop stand for adjustability and rigidity. Additionally, a sophisticated set of nut patterns is used within both tubing sections to ensure proper locking and assembly strength. FEA was conducted to ensure the Prop Stand could sufficiently support the weight of the roof within a factor of safety of 3.",
       // image: "BITCOIN.png",
       // github: "https://github.com/kayne-lee/bitcoin-predictor",
-      // }
+      // } 
   ];
   
