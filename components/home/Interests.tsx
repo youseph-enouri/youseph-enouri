@@ -70,7 +70,7 @@ export function useInterests() {
 
 export const INTERESTS = [
   {
-    name: "Hockey",
+    name: "Lego",
     // image: HOCKEY,
   },
   {
@@ -86,7 +86,7 @@ export const INTERESTS = [
     // image: WORKOUT,
   },
   {
-    name: "Shoe Collection",
+    name: "Coffee",
     // image: SHOE,
   },
 ];
