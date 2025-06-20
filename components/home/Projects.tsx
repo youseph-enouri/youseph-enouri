@@ -99,46 +99,59 @@ export function useProjects() {
 
 export const PROJECTS = [
   {
-    name: "Computer Vision Keyboard",
-    technologies: ["Python", "CV2", "MediaPipe"],
+    name: "Rotary Encoder Signal Conditioner",
+    technologies: ["C++", "Arduino", "SolidWorks"],
     highlights: 
-      "Developed a Python application using OpenCV and MediaPipe to facilitate hands-free typing by recognizing hand gestures through a webcam. Integrated a virtual keyboard interface to provide seamless and intuitive user interaction, leading to a 30% increase in typing speed for users with limited mobility. Engineered a robust hand detection system utilizing MediaPipe Hand landmarks to accurately calculate the distance between the index and middle fingers, mapping gestures to keyboard characters with 95% accuracy. The application includes predictive text and auto-correction features, enabling users to personalize the typing experience through customizable keyboard layouts, gesture sensitivity, and language support. The system's architecture ensures a high degree of accuracy and responsiveness, with a dynamic virtual keyboard that adapts to different hand gestures and language preferences.",
-    video: "AIKEYBOARD.mp4",
-    github: "https://github.com/kayne-lee/Computer-Vision-Keyboard",
+      "Designed and prototyped a rotary encoder signal conditioner to aid in RPM testing on Skyjack Machinery. Created a final product for in-house use and tested under several conditions. This device has been added to the Skyjack Test and Validation department as a Transducer compatible with the eDAQ system. The connections are compatible with both Molex and Deutch bulk connectors for transferability. Data is collected and passed through the arduino script to be converted to CAN data. ",
+    // video: "AIKEYBOARD.mp4",
+    // github: "https://github.com/kayne-lee/Computer-Vision-Keyboard",
   },
   {
-    name: "Caption Generator",
-    technologies: ["JSON", "AWS", "Next.js", "S3"],
+    name: "6900 Grinder Belt Guard",
+    technologies: ["Weldment", "SolidWorks", "FEA"],
     highlights: 
-      "Developed a Next.js application facilitating user-generated video uploads, integrating AWS S3 for efficient media storage to enhance system performance and handling of high-resolution video content leading to 50% reduction in server load and a 20% increase in upload speed. Engineered a dynamic captioning feature utilizing AWS Transcribe Services enabling users to personalize captions by adjusting fonts, colors, and text positioning. The system’s architecture ensured a seamless process of video-to-text conversion, with an additional layer of stylization.",
-    image: "Caption.png",
-    github: "https://github.com/kayne-lee/Caption-Creator",
+      "Designed and managed the weldment of a 1:1 belt guard for sheave testing of the Grinder belt. This guard ensures safety is accounted for while having access to the sheave for marking when needed. The components of this guard include several bent sheet metal parts, lexan sheets for visability, and a accesible door for sheave access. Furthermore a lifting lug is included and located at the Center of Gravity for safe lifting and mounting of this guard. Extensive weld calculations were performed to ensure the appropriate welds were made (majority are filet welds).",
+    // image: "Caption.png",
+    // github: "https://github.com/kayne-lee/Caption-Creator",
   },
     {
-      name: "NumerAI Model",
-      technologies: ["Python", "API"],
+      name: "Trestles",
+      technologies: ["Weldment", "Spring loaded", "FEA"],
       highlights: 
-        "Developped a ML model to participate in the NumerAI tournament to trade crypto currencies. Currently have a 12% profit and ranked top 25 in the season. Used NumerAI's API to parse and organize the data and then used a LightGBM model to process the data given by NumerAI.",
-      image: "NumerAI.png",
-      github: "https://github.com/kayne-lee/numerAIModel",
+        "Designed and spearheaded the weldment and assembly of a high capacity Trestle stand. Two were made for use within different bays. These stands were made up of tubing and a few bent plates. The wheels are strategically engineered to compress and retract once the weight is placed on the trestles, keeping them stationary and secure. Weightless trestles are easily transportable through the unretrackted wheels. This mechanism can be seen below in the DWG as well as the model. The chain link is added to ensure the wheel subassembly does not fall out if the trstles are lifted high off the ground using jib cranes.",
+      // image: "NumerAI.png",
+      // github: "https://github.com/kayne-lee/numerAIModel",
     },
     {
-      name: "SmartPlate",
-      technologies: ["Next.js", "OpenAI"],
+      name: "Trackstand",
+      technologies: ["Sheet metal", "SolidWorks"],
       highlights: 
-        "Created a Next.js application integrated with OpenAI API to create a budget friendly meal planner. Took data from the user and input into a GPT-3.5-Turbo model and output a list of meals along with ingredients and price of the meal. These ingredients could then be added to a grocery list where all the ingredients needed are stored along with total price, number of meals, and average cost per meal spent.",
-      image: "Smart.png",
-      github: "https://github.com/kayne-lee/smartplate",
+        "Designed and fabricated a st of trackstands to support the heavy tracks during assembly. The tracks rest on these stands to ensure safe assembly. The stands are strategically made to increase in height as needed with a self locking nut. These can also be sloped within 30 degrees.",
+      // image: "Smart.png",
+      // github: "https://github.com/kayne-lee/smartplate",
     },
       {
-      name: "Bitcoin Predictor",
-      technologies: ["Python", "Jupyter Notebook"],
+      name: "Prop Stands",
+      technologies: ["Break Press", "Solidworks"],
       highlights: 
-        "Developed an algorithm to predict the future price of Bitcoin using historical price and sentimental data. This project used USD/BTC price from Yahoo Fincance, along with data from wikipedia about edits to the Bitcoin page. These datas were merged then used to train a random forest model then switched to XGBoost model to improve accuracy. Developped a backtesting system and use a robust error metric to determine if the algorithm is performing well. This system is also able to make next-day predictions.",
-      image: "BITCOIN.png",
-      github: "https://github.com/kayne-lee/bitcoin-predictor",
+        "Designed and developed 4 Prop Stands to hold open the roof of Tigercats 800's machines. A turnbuckle is used in each rpop stand for adjustability and rigidity. Additionally, a sophisticated set of nut patterns is used within both tubing sections to ensure proper locking and assembly strength. FEA was conducted to ensure the Prop Stand could sufficiently support the weight of the roof within a factor of safety of 3.",
+      // image: "BITCOIN.png",
+      // github: "https://github.com/kayne-lee/bitcoin-predictor",
     },
-    
-  
+    {name: "Cooler Carts",
+      technologies: ["Break Press", "Solidworks", "Weldment"],
+      highlights: 
+        "Designed and developed two dual cooler carts for the storage and transportation of cooler carts from initial assembly to machine assembly. These carts have angled platforms allowing the carts to rest stably.",
+      // image: "BITCOIN.png",
+      // github: "https://github.com/kayne-lee/bitcoin-predictor",
+      }
+      // {
+      // name: "",
+      // technologies: ["Break Press", "Solidworks"],
+      // highlights: 
+      //   "Designed and developed 4 Prop Stands to hold open the roof of Tigercats 800's machines. A turnbuckle is used in each rpop stand for adjustability and rigidity. Additionally, a sophisticated set of nut patterns is used within both tubing sections to ensure proper locking and assembly strength. FEA was conducted to ensure the Prop Stand could sufficiently support the weight of the roof within a factor of safety of 3.",
+      // image: "BITCOIN.png",
+      // github: "https://github.com/kayne-lee/bitcoin-predictor",
+      // }
   ];
   
